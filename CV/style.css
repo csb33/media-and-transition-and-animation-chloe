@@ -1,0 +1,138 @@
+body {
+    margin: 0%;
+    }
+
+/* FLEX CONTAINER: */
+.container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    }
+
+
+/* FLEX ITMES: */
+/* LEFT/TOP */
+.col-1{
+    background-color: rgb(23, 107, 86);
+    height: 33.33333vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-size: large;
+    }
+
+
+.col-1-text{
+   background-color:rgb(13, 77, 61);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 8rem;
+   width: 10rem;
+   transition: all;
+   transition: 2s;
+   animation-name: top-lefth-animation;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   }
+       
+.col-1-text:hover{
+   height: 10rem;
+   width: 20rem;
+   font-size: x-large;
+   }
+    
+@keyframes top-lefth-animation{
+   from {background-color: rgb(13, 77, 61);}
+   to {background-color: rgb(3, 56, 43);}
+   }
+
+
+/* CENTER  */
+.col-2{
+    background-color: rgb(17, 71, 103);
+    font-style: italic;
+    font-size: xx-large;
+    height: 33.3333vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation-name: center-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: color;
+    transition: 2s;
+    } 
+
+.col-2:hover{
+    height: 100vh;
+    width: 100vw;
+    }
+
+@keyframes center-animation{
+    from {background-color: rgb(17, 71, 103);}
+    to {background-color: rgb(6, 41, 62);}
+    }
+
+
+/* BOTTOM/RIGHT */
+.col-3{ 
+    background-color:rgb(8, 100, 42);
+    height: 33.333333vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    font-size: large;
+    animation-name: bottom-righth-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    }
+
+@keyframes bottom-righth-animation{
+    from {background-color: rgb(8, 100, 42);}
+    to {background-color: rgb(9, 78, 42);}
+    }
+
+
+
+/* MEDIA QUERIES     */
+@media only screen and (max-width: 75rem){
+    /* PHONE: */
+    [class*="col-"] {
+    width: 100%;}
+    }
+
+@media only screen and (min-width: 75rem){
+    /* DESKTOP: */
+   [class="container"] {
+    display: flex;
+    flex-direction: row;
+   }
+
+    .col-1{
+        width: 33.3333333%;
+        height: 100vh;
+        }
+    .col-2{
+        width: 33.3333333%;
+        height: 100vh;
+        }
+    .col-3{
+        width: 33.3333333%;
+        height: 100vh;
+        }
+    }
+
+@media print{
+    /* PRINT */
+    [class="container"] {
+        color: black;
+        background-color: white;
+        }
+    }
